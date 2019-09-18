@@ -6,7 +6,7 @@ var courier_info = {
     tracking_url: "http://wwwapps.ups.com/WebTracking/processInputRequest?TypeOfInquiryNumber=T&Inq" + "uiryNumber1="
   },
   usps: {
-    patterns: [new RegExp(/\b((420 ?\d{5} ?)?(91|92|93|94|95|01|03|04|70|23|13)\d{2} ?\d{4} ?\d{4} ?\d{4} ?\d{4}( ?\d{2,6})?)\b/i), new RegExp(/\b((M|P[A-Z]?|D[C-Z]|LK|E[A-C]|V[A-Z]|R[A-Z]|CP|CJ|LC|LJ) ?\d{3} ?\d{3} ?\d{3} ?[A-Z]?[A-Z]?)\b/i), new RegExp(/\b(82 ?\d{3} ?\d{3} ?\d{2})\b/i)],
+    patterns: [new RegExp(/\be[a-z]\d{9}us\b/i), new RegExp(/\b((420 ?\d{5} ?)?(91|92|93|94|95|01|03|04|70|23|13)\d{2} ?\d{4} ?\d{4} ?\d{4} ?\d{4}( ?\d{2,6})?)\b/i), new RegExp(/\b((M|P[A-Z]?|D[C-Z]|LK|E[A-C]|V[A-Z]|R[A-Z]|CP|CJ|LC|LJ) ?\d{3} ?\d{3} ?\d{3} ?[A-Z]?[A-Z]?)\b/i), new RegExp(/\b(82 ?\d{3} ?\d{3} ?\d{2})\b/i)],
     tracking_url: "https://tools.usps.com/go/TrackConfirmAction?qtc_tLabels1="
   },
   ontrac: {
@@ -19,7 +19,7 @@ var courier_info = {
   },
 
   fedex: {
-    patterns: [new RegExp(/\b(((96\d\d|6\d)\d{3} ?\d{4}|96\d{2}|\d{4}) ?\d{4} ?\d{4}( ?\d{3})?)\b/i)],
+    patterns: [new RegExp(/\b100\d{31}\b/i), new RegExp(/\b(((96\d\d|6\d)\d{3} ?\d{4}|96\d{2}|\d{4}) ?\d{4} ?\d{4}( ?\d{3})?)\b/i)],
     tracking_url: "http://www.fedex.com/Tracking?language=english&cntry_code=us&tracknumbers="
   }
 };
